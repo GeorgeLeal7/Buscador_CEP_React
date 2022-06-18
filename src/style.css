@@ -1,0 +1,103 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#121212, #212b46);
+}
+
+.title{
+    font-size: 5em;
+    color: white;
+    animation: flipTitle 2s;
+}
+
+/* Animação ao entrar no site */
+@keyframes flipTitle{
+    /* Da onde começa */
+    from{
+        transform: rotateX(90deg);
+    }
+    /* E aonde Termina */
+    to{
+        transform: rotateX(0deg);
+    }
+}
+
+.containerInput{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin: 34px 0;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 1px 3px 8px rgba(0,0,0, 0.5);
+
+}
+
+.containerInput input{
+    background-color: transparent;
+    border: 0;
+    font-size: 1em;
+    color: white;
+    outline: none;
+    margin-right: 8px;
+
+}
+
+.containerInput input::placeholder{
+    color: #f1f1f1;
+}
+
+.buttonSearch{
+    background-color: transparent;
+    color: white;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.buttonSearch:hover{
+    transform: scale(1.2);
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 500px;
+    border-radius: 28px;
+}
+
+.main h2{
+    margin: 16px 0;
+    font-size: 2.8em;
+    color: #244cbc;
+}
+
+.main span{
+    margin-bottom: 16px;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+@media ( max-width: 620px){
+    .title{
+        font-size: 4em;
+    }
+
+    .main h2{
+        font-size: 2.8em;
+    }
+
+    .main{
+        width: 80%;
+        min-height: 250px;
+    }
+}
